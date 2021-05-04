@@ -10,6 +10,18 @@ class Letter {
         }
       })
   }
+
+  toString() {
+      return this.letter = '_'
+  }
+
+  guess(guessLetter) {
+      if(guessLetter === this.letter) {
+          return true
+      } else {
+          return false
+      }
+  }
 }
 
 module.exports = Letter;
