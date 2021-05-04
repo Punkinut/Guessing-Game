@@ -12,15 +12,25 @@ class Letter {
   }
 
   toString() {
-      return this.letter = '_'
+      if(this.visible === true) {
+          return this.letter
+      } else {
+            return this.letter = '_'
+      }
+      
   }
 
   guess(guessLetter) {
       if(guessLetter === this.letter) {
+        this.visible = true;
           return true
       } else {
           return false
       }
+  }
+
+  getSolution () {
+      return this.letter
   }
 }
 
